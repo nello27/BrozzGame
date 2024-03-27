@@ -213,7 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402f93e8465ee4f43b9a15a1dad44c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superSaiyan: {fileID: 8038196086104127589, guid: 9f87e6c4d9477904e84c74ff47619b6f, type: 3}
   fireBullet: {fileID: 6849353673345943731, guid: 8409b58357c01894a93571866727442e, type: 3}
+  activeBullet: 0
 --- !u!114 &176367690338943266
 MonoBehaviour:
   m_ObjectHideFlags: 0

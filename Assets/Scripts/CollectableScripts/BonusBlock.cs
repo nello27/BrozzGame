@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BonusBlock : MonoBehaviour
@@ -8,6 +9,10 @@ public class BonusBlock : MonoBehaviour
     public Transform botton_Collision;
 
     private Animator anim;
+
+    public GameObject start;
+
+    private Animator animator;
 
     public LayerMask playerLayer;
 
@@ -21,7 +26,8 @@ public class BonusBlock : MonoBehaviour
     void Awake() { 
         
         anim = GetComponent<Animator>();
-    
+        animator = start.GetComponent<Animator>();
+
     }
 
     // Start is called before the first frame update
@@ -48,6 +54,7 @@ public class BonusBlock : MonoBehaviour
             if (hit.collider.gameObject.tag == MyTags.PLAYER_TAG) {
                 //  increase score
                 anim.Play("BlockIdle");
+                animator.Play("GoStartAnimation");
                 startAnim = true;
                 
             }
