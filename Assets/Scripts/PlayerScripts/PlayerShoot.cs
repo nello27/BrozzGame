@@ -8,23 +8,31 @@ public class PlayerShoot : MonoBehaviour
     public GameObject fireBullet;
     public bool activeBullet;
 
-
     private GameObject currentAura;
+    private GameObject supersaiyanObject;
 
     void Start()
     {
-        activeBullet = false;    
+        activeBullet = false;
     }
+
     // Update is called once per frame
     void Update()
     {
+        // Buscar un objeto con el tag "supersaiyan"
+        supersaiyanObject = GameObject.FindWithTag("supersaiyan");
+
         ShootBullet();
+
         if (activeBullet)
         {
             if (currentAura == null)
             {
                 // No hay una instancia de superSaiyan activa, así que instanciamos una nueva
-                currentAura = Instantiate(superSaiyan,transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
+                currentAura = Instantiate(superSaiyan, transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
+
+                // Llamar a DisableSupersaiyan después de 3 segundos
+                StartCoroutine(DisableSupersaiyan());
             }
             else
             {
@@ -41,19 +49,29 @@ public class PlayerShoot : MonoBehaviour
                 currentAura = null;
             }
         }
-
     }
 
-    void ShootBullet() {
-
-        if (Input.GetKeyDown(KeyCode.J) && activeBullet) {
-            
-
+    void ShootBullet()
+    {
+        if (Input.GetKeyDown(KeyCode.J) && activeBullet)
+        {
             GameObject bullet = Instantiate(fireBullet, transform.position, Quaternion.identity);
-            
             bullet.GetComponent<FireBullet>().Speed *= transform.localScale.x;
-        
         }
-    
+    }
+
+    IEnumerator DisableSupersaiyan()
+    {
+        yield return new WaitForSeconds(3f);
+
+        if (supersaiyanObject != null)
+        {
+            supersaiyanObject.SetActive(false);
+            Debug.Log("Objeto con el tag 'supersaiyan' desactivado.");
+        }
+        else
+        {
+            Debug.Log("No se puede desactivar el objeto con el tag 'supersaiyan' porque no se encontró.");
+        }
     }
 }
