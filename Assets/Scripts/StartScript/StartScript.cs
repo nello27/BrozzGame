@@ -6,10 +6,13 @@ using UnityEngine;
 public class StartScript : MonoBehaviour
 {
     private Animator start;
+
     // Start is called before the first frame update
     void Start()
     {
         start = GetComponent<Animator>();
+
+       
     }
 
     // Update is called once per frame

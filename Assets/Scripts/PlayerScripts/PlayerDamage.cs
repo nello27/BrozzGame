@@ -11,6 +11,7 @@ public class PlayerDamage : MonoBehaviour
     private int lifeScoreCount;
 
     private bool canDamage;
+    public Vector3 respawnPosition;
 
     void Awake()
     {
@@ -25,8 +26,18 @@ public class PlayerDamage : MonoBehaviour
     void Start() {
 
         Time.timeScale = 1f;
-    
+        // Guardamos la posición inicial del jugador como posición de respawn
+        respawnPosition = transform.position;
+
     }
+
+
+    // Método para respawnear en el último checkpoint alcanzado
+    public void RespawnAtLastCheckpoint(Vector3 checkpointPosition)
+    {
+        transform.position = checkpointPosition;
+    }
+
 
     public void DealDamage() {
 
@@ -39,6 +50,8 @@ public class PlayerDamage : MonoBehaviour
             if (lifeScoreCount >= 0)
             {
                 lifeText.text = "x" + lifeScoreCount;
+                // Respawnear en el último checkpoint alcanzado
+                RespawnAtLastCheckpoint(respawnPosition);
             }
 
             if (lifeScoreCount == 0)
@@ -71,5 +84,10 @@ public class PlayerDamage : MonoBehaviour
         SceneManager.LoadScene("GamePlay");
     }
 
-
+    // Método para detectar la muerte del jugador (este método debe ser adaptado según el sistema de muerte de tu juego)
+    public void Die()
+    {
+        // Respawnear en el último checkpoint alcanzado
+        RespawnAtLastCheckpoint(respawnPosition);
+    }
 }

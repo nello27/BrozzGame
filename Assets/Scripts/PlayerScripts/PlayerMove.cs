@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
     // Potencia de salto del jugador
     private float jumpPower = 10f;
 
+    private Vector3 respawnPosition;
+
     private void Awake()
     {
         // Obtener las referencias a los componentes al inicio
@@ -118,4 +120,5 @@ public class PlayerMove : MonoBehaviour
             anim.SetBool("Jump", true);
         }
     }
+
 }

@@ -11,8 +11,12 @@ public class BonusBlock : MonoBehaviour
     private Animator anim;
 
     public GameObject start;
+    public GameObject coin;
 
     private Animator animator;
+
+    public bool OnStar;
+    public bool Oncoin;
 
     public LayerMask playerLayer;
 
@@ -21,12 +25,22 @@ public class BonusBlock : MonoBehaviour
     private Vector3 animPosition;
     private bool startAnim;
     private bool canAnimate = true;
+    private Vector3 posicionOriginal;
 
 
     void Awake() { 
         
         anim = GetComponent<Animator>();
-        animator = start.GetComponent<Animator>();
+        if (OnStar)
+        {
+            animator = start.GetComponent<Animator>();
+        }
+        if (Oncoin)
+        {
+            animator = coin.GetComponent<Animator>();
+        }
+
+
 
     }
 
@@ -36,6 +50,10 @@ public class BonusBlock : MonoBehaviour
         originPosition = transform.position;
         animPosition = transform.position;
         animPosition.y += 0.15f;
+        // Almacena la posición original, ignorando el eje Y
+        posicionOriginal = transform.position;
+       
+
     }
 
     // Update is called once per frame
@@ -43,6 +61,12 @@ public class BonusBlock : MonoBehaviour
     {
         CheckForCollision();
         AnimateUpDown();
+
+        
+        // Incrementar la posición Y del objeto utilizando la velocidad de ascenso y el tiempo transcurrido desde el último frame
+
+
+
     }
 
     void CheckForCollision() {
@@ -54,10 +78,16 @@ public class BonusBlock : MonoBehaviour
             if (hit.collider.gameObject.tag == MyTags.PLAYER_TAG) {
                 //  increase score
                 anim.Play("BlockIdle");
-                animator.Play("GoStartAnimation");
-                startAnim = true;
                 
-            }
+                    if (OnStar)
+                    {
+                        animator.Play("GoStartAnimation");
+                    }
+                    
+                    startAnim = true;
+
+                    
+                }
 
         }
         }
@@ -71,6 +101,14 @@ public class BonusBlock : MonoBehaviour
                 moveDirection = Vector3.down;
                 canAnimate = false;
             } else if (transform.position.y <= originPosition.y) {
+                if (Oncoin)
+                {
+                    Instantiate(coin, posicionOriginal, Quaternion.identity);
+                    
+                }
+                
+                 
+                //animator.Play("OnCoin");
                 startAnim = false;
             }
         }

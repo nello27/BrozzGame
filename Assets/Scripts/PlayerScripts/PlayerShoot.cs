@@ -30,7 +30,7 @@ public class PlayerShoot : MonoBehaviour
             {
                 // No hay una instancia de superSaiyan activa, así que instanciamos una nueva
                 currentAura = Instantiate(superSaiyan, transform.position + new Vector3(0f, 0.5f, 0f), Quaternion.identity);
-
+                superSaiyan.SetActive(true);
                 // Llamar a DisableSupersaiyan después de 3 segundos
                 StartCoroutine(DisableSupersaiyan());
             }
@@ -67,6 +67,7 @@ public class PlayerShoot : MonoBehaviour
         if (supersaiyanObject != null)
         {
             supersaiyanObject.SetActive(false);
+            activeBullet = false;
             Debug.Log("Objeto con el tag 'supersaiyan' desactivado.");
         }
         else
