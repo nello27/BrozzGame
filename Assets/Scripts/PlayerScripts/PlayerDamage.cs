@@ -8,7 +8,7 @@ public class PlayerDamage : MonoBehaviour
 {
 
     public Text lifeText;
-    private int lifeScoreCount;
+    public int lifeScoreCount;
 
     private bool canDamage;
     public Vector3 respawnPosition;
@@ -29,6 +29,11 @@ public class PlayerDamage : MonoBehaviour
         // Guardamos la posición inicial del jugador como posición de respawn
         respawnPosition = transform.position;
 
+    }
+
+    public void Update()
+    {
+        lifeText.text = "x" + lifeScoreCount; ;
     }
 
 
