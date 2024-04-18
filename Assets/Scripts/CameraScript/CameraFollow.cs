@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     public Bounds cameraBounds;
 
     // Objeto a seguir
-    private Transform target;
+    public Transform target;
     // Distancia entre la cámara y el objetivo en el eje Z
     private float offsetZ;
     // Última posición conocida del objetivo

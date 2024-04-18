@@ -22,7 +22,7 @@ public class BirdScript : MonoBehaviour
     public LayerMask playerLayer;
 
     // Booleano para controlar si el pájaro ha atacado
-    private bool attaked;
+    public bool attaked;
 
     // Velocidad del pájaro
     private float velocity = 2.5f;
@@ -41,11 +41,15 @@ public class BirdScript : MonoBehaviour
     void Start()
     {
         // Establecer posiciones de origen y movimiento
-        originPosition = new Vector3(0, 2.9f, 0);
-        originPosition.x += 6f;
+        // originPosition = new Vector3(0, 2.9f, 0);
+        //originPosition.x += 6f;
 
-        movePosition = new Vector3(0, 2.9f, 0);
-        movePosition.x -= 6f;
+        originPosition.x = transform.position.x;
+
+        // movePosition = new Vector3(0, 2.9f, 0);
+        // movePosition.x -= 6f;
+
+        movePosition.x = transform.position.x - 10f;
 
         // Permitir que el pájaro se mueva
         canMove = true;
@@ -108,8 +112,10 @@ public class BirdScript : MonoBehaviour
                 attaked = true;
                 // Reproducir la animación de vuelo del pájaro
                 anim.Play("BirdFly");
+                StartCoroutine(BirdStone());
             }
         }
+        
     }
 
     // Coroutine para manejar la muerte del pájaro
@@ -118,6 +124,15 @@ public class BirdScript : MonoBehaviour
         // Esperar un tiempo antes de desactivar el pájaro
         yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
+    }
+
+    // Coroutine para Retorno caida piedra
+    IEnumerator BirdStone()
+    {
+        // Esperar un tiempo antes de desactivar el pájaro
+        yield return new WaitForSeconds(2f);
+        anim.Play("BirdStone");
+        attaked = false;
     }
 
     // Método que se llama cuando el pájaro colisiona con otro objeto
