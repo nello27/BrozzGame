@@ -11,6 +11,10 @@ public class PlayerShoot : MonoBehaviour
     private GameObject currentAura;
     private GameObject supersaiyanObject;
 
+    public AudioSource audioSource; // Asegúrate de asignar esto desde el editor de Unity
+    public AudioClip shootSound; // Asegúrate de asignar esto desde el editor de Unity
+
+
     void Start()
     {
         activeBullet = false;
@@ -57,6 +61,13 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject bullet = Instantiate(fireBullet, transform.position, Quaternion.identity);
             bullet.GetComponent<FireBullet>().Speed *= transform.localScale.x;
+
+            // Reproducir el sonido
+            if (audioSource != null && shootSound != null)
+            {
+                audioSource.clip = shootSound;
+                audioSource.Play();
+            }
         }
     }
 

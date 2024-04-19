@@ -386,6 +386,7 @@
 "Assets/Scripts/EnemyScripts/Boss/BossScript.cs"
 "Assets/Scripts/EnemyScripts/Boss/StoneScript.cs"
 "Assets/Scripts/EnemyScripts/EggScript.cs"
+"Assets/Scripts/EnemyScripts/EnemieCanyon.cs"
 "Assets/Scripts/EnemyScripts/FrogScript.cs"
 "Assets/Scripts/EnemyScripts/SnailScript.cs"
 "Assets/Scripts/EnemyScripts/SpiderScript.cs"
