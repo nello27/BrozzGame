@@ -28,8 +28,9 @@ public class BonusBlock : MonoBehaviour
     private Vector3 posicionOriginal;
 
 
-    void Awake() { 
-        
+    void Awake()
+    {
+
         anim = GetComponent<Animator>();
         if (OnStar)
         {
@@ -52,7 +53,7 @@ public class BonusBlock : MonoBehaviour
         animPosition.y += 0.15f;
         // Almacena la posición original, ignorando el eje Y
         posicionOriginal = transform.position;
-       
+
 
     }
 
@@ -62,52 +63,63 @@ public class BonusBlock : MonoBehaviour
         CheckForCollision();
         AnimateUpDown();
 
-        
+
         // Incrementar la posición Y del objeto utilizando la velocidad de ascenso y el tiempo transcurrido desde el último frame
 
 
 
     }
 
-    void CheckForCollision() {
+    void CheckForCollision()
+    {
 
-        if (canAnimate) { 
-        RaycastHit2D hit = Physics2D.Raycast(botton_Collision.position, Vector2.down, 0.1f , playerLayer);
+        if (canAnimate)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(botton_Collision.position, Vector2.down, 0.1f, playerLayer);
 
-        if (hit) {
-            if (hit.collider.gameObject.tag == MyTags.PLAYER_TAG) {
-                //  increase score
-                anim.Play("BlockIdle");
-                
+            if (hit)
+            {
+                if (hit.collider.gameObject.tag == MyTags.PLAYER_TAG)
+                {
+                    //  increase score
+                    anim.Play("BlockIdle");
+
                     if (OnStar)
                     {
-                        animator.Play("GoStartAnimation");
+                       animator.Play("GoStartAnimation");
                     }
-                    
+
                     startAnim = true;
 
-                    
+
                 }
 
-        }
+            }
         }
     }
 
-    void AnimateUpDown() {
 
-        if (startAnim) {
+
+    void AnimateUpDown()
+    {
+
+        if (startAnim)
+        {
             transform.Translate(moveDirection * Time.smoothDeltaTime);
-            if (transform.position.y >= animPosition.y) {
+            if (transform.position.y >= animPosition.y)
+            {
                 moveDirection = Vector3.down;
                 canAnimate = false;
-            } else if (transform.position.y <= originPosition.y) {
+            }
+            else if (transform.position.y <= originPosition.y)
+            {
                 if (Oncoin)
                 {
                     Instantiate(coin, posicionOriginal, Quaternion.identity);
-                    
+
                 }
-                
-                 
+
+
                 //animator.Play("OnCoin");
                 startAnim = false;
             }

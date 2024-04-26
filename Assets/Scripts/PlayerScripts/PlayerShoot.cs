@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -13,7 +16,8 @@ public class PlayerShoot : MonoBehaviour
 
     public AudioSource audioSource; // Asegúrate de asignar esto desde el editor de Unity
     public AudioClip shootSound; // Asegúrate de asignar esto desde el editor de Unity
-
+    public int seconds = 5;
+    public Text textSuperSaiyan;
 
     void Start()
     {
@@ -73,7 +77,16 @@ public class PlayerShoot : MonoBehaviour
 
     IEnumerator DisableSupersaiyan()
     {
-        yield return new WaitForSeconds(3f);
+        float tiempoTranscurrido = 5.9f;
+
+        while (tiempoTranscurrido > 0)
+        {
+            yield return null; // Esperar al siguiente frame
+            tiempoTranscurrido -= Time.deltaTime;
+
+            // Convertir el tiempo transcurrido a entero y asignarlo al componente de texto
+            textSuperSaiyan.text = Mathf.RoundToInt(tiempoTranscurrido).ToString();
+        }
 
         if (supersaiyanObject != null)
         {

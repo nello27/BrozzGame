@@ -12,14 +12,20 @@ public class StartScript : MonoBehaviour
     {
         start = GetComponent<Animator>();
 
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    void StartAnimationStop()
+    {
+        start.speed = 0f;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
