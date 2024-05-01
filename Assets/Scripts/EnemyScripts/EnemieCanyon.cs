@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemieCanyon : MonoBehaviour
@@ -8,6 +9,7 @@ public class EnemieCanyon : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask GroundLayer;
     public Animator Enemy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class EnemieCanyon : MonoBehaviour
             Destroy(gameObject);
 
         }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,4 +52,7 @@ public class EnemieCanyon : MonoBehaviour
 
         }
     }
+
+
+
 }

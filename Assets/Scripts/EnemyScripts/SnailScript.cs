@@ -45,6 +45,7 @@ public class SnailScript : MonoBehaviour
     {
         // Al inicio del juego, permitir que el caracol se mueva
         canMove = true;
+
     }
 
     // Update es llamado una vez por frame
