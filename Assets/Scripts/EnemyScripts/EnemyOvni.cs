@@ -8,6 +8,9 @@ public class EnemyOvni : MonoBehaviour
     public float rotationSpeed = 1f;
     public LayerMask playerLayer;
     private Animator anim;
+    private GameObject rebound;
+    private AudioSource sound;
+   
 
     private Transform target;
     private Vector3 originPosition;
@@ -17,11 +20,14 @@ public class EnemyOvni : MonoBehaviour
 
     void Start()
     {
+
         enableAnimation = false;
         originPosition = transform.position;
         target = pointA; // Comenzamos moviéndonos hacia pointA
         top_Collision = GetComponent<Transform>(); // Assign the current object's transform
         anim = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -69,6 +75,10 @@ public class EnemyOvni : MonoBehaviour
         {
             if (topHit.gameObject.tag == MyTags.PLAYER_TAG)
             {
+                //inactivamos el componente collider 2d
+                sound.Play();
+                gameObject.GetComponent<Collider2D>().enabled = false;
+
                 enableAnimation = true;
                 // topHit.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.x, 7f);
                 anim.Play("smashEnemy");
@@ -86,4 +96,12 @@ public class EnemyOvni : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == MyTags.PLAYER_TAG ) {
+
+            print("Colisiona con el Player");
+
+        }
+    }
 }

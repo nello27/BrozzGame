@@ -9,6 +9,7 @@ public class EnemieCanyon : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask GroundLayer;
     public Animator Enemy;
+    public bool AnimationTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,12 @@ public class EnemieCanyon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (AnimationTwo)
+        {
+
+            Enemy.Play("Enemie2");
+        }
+
         if (Physics2D.OverlapCircle(transform.position, 0.5f, playerLayer))
         {
 
