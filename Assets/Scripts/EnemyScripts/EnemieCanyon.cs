@@ -10,16 +10,19 @@ public class EnemieCanyon : MonoBehaviour
     public LayerMask GroundLayer;
     public Animator Enemy;
     public bool AnimationTwo;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
         Enemy = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag(MyTags.PLAYER_TAG);
+       
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (AnimationTwo)
         {
@@ -27,11 +30,11 @@ public class EnemieCanyon : MonoBehaviour
             Enemy.Play("Enemie2");
         }
 
-        if (Physics2D.OverlapCircle(transform.position, 0.5f, playerLayer))
+        if (Physics2D.OverlapCircle(transform.position, 1f, playerLayer))
         {
-
-            player.GetComponent<PlayerDamage>().DealDamage();
-
+           
+             player.GetComponent<PlayerDamage>().DealDamage();
+             
         }
 
         if (Physics2D.OverlapCircle(transform.position, 0.5f, GroundLayer))
@@ -58,6 +61,7 @@ public class EnemieCanyon : MonoBehaviour
 
 
         }
+
     }
 
 

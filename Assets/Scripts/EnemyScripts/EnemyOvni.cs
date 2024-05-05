@@ -100,8 +100,10 @@ public class EnemyOvni : MonoBehaviour
     {
         if (collision.gameObject.tag == MyTags.PLAYER_TAG ) {
 
-            print("Colisiona con el Player");
+            collision.gameObject.GetComponent<PlayerDamage>().DealDamage();
 
         }
+
+        
     }
 }
