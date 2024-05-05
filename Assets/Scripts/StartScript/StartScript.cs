@@ -37,6 +37,7 @@ public class StartScript : MonoBehaviour
             PlayerShoot playerShoot = playerObject.GetComponent<PlayerShoot>();
             // Activar el booleano activeBullet en el componente PlayerShoot
             playerShoot.activeBullet = true;
+            gameObject.SetActive(false);
         }
     }
 }

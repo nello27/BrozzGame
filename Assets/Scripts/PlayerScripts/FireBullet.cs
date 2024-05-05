@@ -23,7 +23,7 @@ public class FireBullet : MonoBehaviour
     {
         // Al iniciar, la bala puede moverse y se desactivará después de 5 segundos
         canMove = true;
-        StartCoroutine(DisableBullet(5f));
+        StartCoroutine(DisableBullet(3f));
     }
 
     void Update()
@@ -55,7 +55,8 @@ public class FireBullet : MonoBehaviour
     IEnumerator DisableBullet(float timer)
     {
         yield return new WaitForSeconds(timer);
-        gameObject.SetActive(false);
+       // gameObject.SetActive(false);
+       Destroy(gameObject);
     }
 
     // Método que se llama cuando la bala colisiona con otro objeto

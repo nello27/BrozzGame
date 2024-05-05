@@ -157,10 +157,10 @@ TextureImporter:
       name: fall_block_enemy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 130
-        width: 130.33333
-        height: 130
+        x: 1
+        y: 131
+        width: 127
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,12 +178,12 @@ TextureImporter:
       name: fall_block_enemy_1
       rect:
         serializedVersion: 2
-        x: 130
-        y: 130
-        width: 130.33331
-        height: 130
+        x: 131
+        y: 131
+        width: 127
+        height: 129
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,10 +199,10 @@ TextureImporter:
       name: fall_block_enemy_2
       rect:
         serializedVersion: 2
-        x: 260
-        y: 130
-        width: 130.33333
-        height: 130
+        x: 317
+        y: 187
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: fall_block_enemy_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 130.33333
-        height: 130
+        x: 35
+        y: 31
+        width: 61
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: fall_block_enemy_4
       rect:
         serializedVersion: 2
-        x: 130
-        y: 0
-        width: 130.33333
-        height: 130
+        x: 164
+        y: 34
+        width: 63
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: fall_block_enemy_5
       rect:
         serializedVersion: 2
-        x: 260
-        y: 0
-        width: 130.33333
-        height: 130
+        x: 311
+        y: 72
+        width: 10
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,136 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 79
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5b91f3b12dea04c88992bdb1255c27
+      internalID: -190323695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 54
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dbeeb63707d59849a3098dec69b150d
+      internalID: 2056421715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_8
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 58
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e0746fe9edcb64c87ed758d3bb96d4
+      internalID: 1490047807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_9
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 63
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d94dc647894db944b11c4f720349fc4
+      internalID: -1072485505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_10
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 47
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0020dbfec0ea04e918345979568dd5
+      internalID: -425635037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall_block_enemy_11
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 45
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa7711de8ceeed4293add91ae3988bb
+      internalID: -25843976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c2bf9a80f216abc46a372f01c8374e1a
     internalID: 0
     vertices: []
     indices: 
@@ -292,10 +418,16 @@ TextureImporter:
     nameFileIdTable:
       fall_block_enemy_0: 21300000
       fall_block_enemy_1: 21300002
+      fall_block_enemy_10: -425635037
+      fall_block_enemy_11: -25843976
       fall_block_enemy_2: 21300004
       fall_block_enemy_3: 21300006
       fall_block_enemy_4: 21300008
       fall_block_enemy_5: 21300010
+      fall_block_enemy_6: -190323695
+      fall_block_enemy_7: 2056421715
+      fall_block_enemy_8: 1490047807
+      fall_block_enemy_9: -1072485505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

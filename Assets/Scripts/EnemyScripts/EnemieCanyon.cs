@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class EnemieCanyon : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class EnemieCanyon : MonoBehaviour
     public LayerMask GroundLayer;
     public Animator Enemy;
     public bool AnimationTwo;
-    
+    public GameObject burst;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class EnemieCanyon : MonoBehaviour
     {
         if (collision.tag == MyTags.BULLET_TAG) {
 
+            Instantiate(burst, transform.position, Quaternion.identity);
             Enemy.enabled = false; // En lugar de Enemy.enabled = false;
             Rigidbody2D rb; //  Rigidbody2D para trabajar en un entorno 2D
             rb = GetComponent<Rigidbody2D>(); // Ontgenemod el componente Rigidbody2D

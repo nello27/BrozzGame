@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyOvni : MonoBehaviour
@@ -8,9 +9,10 @@ public class EnemyOvni : MonoBehaviour
     public float rotationSpeed = 1f;
     public LayerMask playerLayer;
     private Animator anim;
-    private GameObject rebound;
+    public GameObject burst;
     private AudioSource sound;
-   
+    private Animator burstanim;
+
 
     private Transform target;
     private Vector3 originPosition;
@@ -26,7 +28,9 @@ public class EnemyOvni : MonoBehaviour
         target = pointA; // Comenzamos moviéndonos hacia pointA
         top_Collision = GetComponent<Transform>(); // Assign the current object's transform
         anim = GetComponent<Animator>();
+        burstanim = GetComponent<Animator>();
         sound = GetComponent<AudioSource>();
+        
 
     }
 
@@ -105,5 +109,27 @@ public class EnemyOvni : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == MyTags.BULLET_TAG)
+        {
+            Instantiate(burst, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+           // StartCoroutine(DisableGameObject());
+
+
+        }
+
+    }
+
+    IEnumerator DisableGameObject() {
+
+        yield return new WaitForSeconds(3f);
+
+        Destroy(burst);
+
+
     }
 }
