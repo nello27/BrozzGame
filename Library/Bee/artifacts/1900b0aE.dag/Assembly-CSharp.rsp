@@ -389,6 +389,7 @@
 "Assets/Scripts/EnemyScripts/EnemieCanyon.cs"
 "Assets/Scripts/EnemyScripts/EnemyOvni.cs"
 "Assets/Scripts/EnemyScripts/FrogScript.cs"
+"Assets/Scripts/EnemyScripts/HornetScript.cs"
 "Assets/Scripts/EnemyScripts/SnailScript.cs"
 "Assets/Scripts/EnemyScripts/SpiderScript.cs"
 "Assets/Scripts/HelperScripts/MyTags.cs"
