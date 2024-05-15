@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyOvni.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\SnailScript.cs" />
+    <Compile Include="Assets\Scripts\TrampolineScript\TrampolineScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\FireBullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerDamage.cs" />

@@ -77,7 +77,7 @@ public class PlayerShoot : MonoBehaviour
 
     IEnumerator DisableSupersaiyan()
     {
-        float tiempoTranscurrido = 5.9f;
+        float tiempoTranscurrido = 20.9f;
 
         while (tiempoTranscurrido > 0)
         {

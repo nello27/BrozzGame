@@ -405,6 +405,7 @@
 "Assets/Scripts/PlayerScripts/ScoreScript.cs"
 "Assets/Scripts/StartScript/CoinScript.cs"
 "Assets/Scripts/StartScript/StartScript.cs"
+"Assets/Scripts/TrampolineScript/TrampolineScript.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"

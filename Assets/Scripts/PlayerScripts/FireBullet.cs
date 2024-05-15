@@ -21,9 +21,11 @@ public class FireBullet : MonoBehaviour
 
     void Start()
     {
+
         // Al iniciar, la bala puede moverse y se desactivará después de 5 segundos
         canMove = true;
         StartCoroutine(DisableBullet(3f));
+
     }
 
     void Update()
