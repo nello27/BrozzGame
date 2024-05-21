@@ -5,13 +5,19 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     PlayerDamage dead;
+    CameraFollow camerapositionY;
     public GameObject Player;
+    public GameObject Camera;
     public GameObject checkPoint;
+    public bool inY;
 
     void Start()
     {
+        
         Player = GameObject.FindWithTag(MyTags.PLAYER_TAG);
+        Camera = GameObject.FindWithTag("MainCamera");
         dead = Player.GetComponent<PlayerDamage>();
+        camerapositionY = Camera.GetComponent<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -26,7 +32,10 @@ public class CheckPoint : MonoBehaviour
         {
             dead.respawnPosition = checkPoint.transform.position;
 
+            if (inY) {
 
+                camerapositionY.followPlayerinY = true;
+            }
         }
     }
 

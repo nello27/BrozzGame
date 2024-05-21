@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TrampolineScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public float bounceForce = 20f; // La fuerza de rebote del trampolín
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            // Aplicar una fuerza hacia arriba
+            Vector2 force = new Vector2(0, bounceForce);
+            rb.AddForce(force, ForceMode2D.Impulse);
+        }
     }
 }

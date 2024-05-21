@@ -24,6 +24,8 @@ public class CameraFollow : MonoBehaviour
     // Variable para habilitar/deshabilitar el seguimiento del jugador
     private bool followPlayer;
 
+    public bool followPlayerinY;
+
     void Awake()
     {
         // Establecer el tamaño del colisionador de la cámara según la resolución
@@ -31,6 +33,7 @@ public class CameraFollow : MonoBehaviour
         myCol.size = new Vector2(Camera.main.aspect * 2f * Camera.main.orthographicSize, 15f);
         // Actualizar los límites de la cámara
         cameraBounds = myCol.bounds;
+        followPlayerinY = false;
     }
 
     // Start is called before the first frame update
@@ -62,7 +65,16 @@ public class CameraFollow : MonoBehaviour
                 // Calcular la nueva posición de la cámara de forma suave
                 Vector3 newCameraPosition = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, cameraSpeed);
                 // Actualizar la posición de la cámara solo en el eje X
-                transform.position = new Vector3(newCameraPosition.x, transform.position.y, newCameraPosition.z);
+                //transform.position = new Vector3(newCameraPosition.x, transform.position.y, newCameraPosition.z);
+                // Actualizar la posición de la cámara solo en el eje X Y
+                //transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y+0.2f, newCameraPosition.z);
+                if (followPlayerinY)
+                {
+                    transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y + 0.2f, newCameraPosition.z);
+                }
+                else {
+                    transform.position = new Vector3(newCameraPosition.x, transform.position.y, newCameraPosition.z);
+                }
                 // Actualizar la última posición conocida del objetivo
                 lastTargetPosition = target.position;
             }

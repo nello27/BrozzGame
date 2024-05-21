@@ -394,6 +394,7 @@
 "Assets/Scripts/EnemyScripts/SpiderScript.cs"
 "Assets/Scripts/HelperScripts/MyTags.cs"
 "Assets/Scripts/PlatformScript/PlatformScript.cs"
+"Assets/Scripts/PlatformScript/PlatformTranslate.cs"
 "Assets/Scripts/PlayerScripts/CheckPoint.cs"
 "Assets/Scripts/PlayerScripts/DeadGround.cs"
 "Assets/Scripts/PlayerScripts/FireBullet.cs"

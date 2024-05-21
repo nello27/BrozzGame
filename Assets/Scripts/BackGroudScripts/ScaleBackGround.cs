@@ -30,7 +30,7 @@ public class ScaleBackGround : MonoBehaviour
         tempScale.x = worldWidth / width + 0.1f;
 
         // Calcular la nueva escala en el eje Y y agregar un pequeño margen (0.1f)
-        tempScale.y = worldHeight / height + 0.1f;
+        tempScale.y = worldHeight / height + 0.2f;
 
         // Aplicar la nueva escala al objeto
         transform.localScale = tempScale;
