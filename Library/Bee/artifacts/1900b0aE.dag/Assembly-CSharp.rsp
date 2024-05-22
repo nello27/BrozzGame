@@ -404,6 +404,7 @@
 "Assets/Scripts/PlayerScripts/PlayerMove.cs"
 "Assets/Scripts/PlayerScripts/PlayerShoot.cs"
 "Assets/Scripts/PlayerScripts/ScoreScript.cs"
+"Assets/Scripts/PortalScript/PortalScript.cs"
 "Assets/Scripts/StartScript/CoinScript.cs"
 "Assets/Scripts/StartScript/StartScript.cs"
 "Assets/Scripts/TrampolineScript/TrampolineScript.cs"

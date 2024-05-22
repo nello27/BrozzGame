@@ -70,7 +70,7 @@ public class CameraFollow : MonoBehaviour
                 //transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y+0.2f, newCameraPosition.z);
                 if (followPlayerinY)
                 {
-                    transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y + 0.2f, newCameraPosition.z);
+                    transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y + 0.15f, newCameraPosition.z);
                 }
                 else {
                     transform.position = new Vector3(newCameraPosition.x, transform.position.y, newCameraPosition.z);

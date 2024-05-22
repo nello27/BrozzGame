@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\CameraScript\CameraFollow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Boss\BossHealt.cs" />
+    <Compile Include="Assets\Scripts\PortalScript\PortalScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
