@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|c:\\users\\yesid\\documents\\unityproyects\\brozzgame\\assets\\scripts\\camerascript\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerascript\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|c:\\users\\yesid\\documents\\unityproyects\\brozzgame\\assets\\scripts\\platformscript\\platformscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\platformscript\\platformscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|c:\\users\\yesid\\documents\\unityproyects\\brozzgame\\assets\\scripts\\portalscript\\portalscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01DB160F-1FAA-FFF6-6DD4-2D16D32258C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portalscript\\portalscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlatformScript.cs",
+              "DocumentMoniker": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\PlatformScript\\PlatformScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlatformScript\\PlatformScript.cs",
+              "ToolTip": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\PlatformScript\\PlatformScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlatformScript\\PlatformScript.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T17:38:32.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\CameraScript\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraScript\\CameraFollow.cs",
+              "ToolTip": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\CameraScript\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraScript\\CameraFollow.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAwwEAAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T16:22:42.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PortalScript.cs",
               "DocumentMoniker": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\PortalScript\\PortalScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PortalScript\\PortalScript.cs",
@@ -35,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlayerMove.cs",
               "DocumentMoniker": "C:\\Users\\Yesid\\Documents\\UnityProyects\\BrozzGame\\Assets\\Scripts\\PlayerScripts\\PlayerMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerScripts\\PlayerMove.cs",

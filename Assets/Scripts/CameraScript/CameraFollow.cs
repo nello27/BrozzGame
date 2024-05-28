@@ -26,6 +26,8 @@ public class CameraFollow : MonoBehaviour
 
     public bool followPlayerinY;
 
+    private Vector3 LimitLeft;
+
     void Awake()
     {
         // Establecer el tamaño del colisionador de la cámara según la resolución
@@ -47,6 +49,7 @@ public class CameraFollow : MonoBehaviour
         offsetZ = (transform.position - target.position).z;
         // Activar el seguimiento del jugador
         followPlayer = true;
+        LimitLeft = new Vector3(0, 0, transform.position.z);
     }
 
     // Update is called once per frame
@@ -57,10 +60,10 @@ public class CameraFollow : MonoBehaviour
         {
             // Calcular la posición futura del objetivo
             Vector3 aheadTargetPos = target.position + Vector3.forward * offsetZ;
-            Vector3 LimitLeft = new Vector3(0,0, transform.position.z);
+
 
             // Si el objetivo se mueve hacia la derecha
-            if (aheadTargetPos.x >= LimitLeft.x)
+            if (aheadTargetPos.x >= LimitLeft.x || aheadTargetPos.x <= LimitLeft.x)
             {
                 // Calcular la nueva posición de la cámara de forma suave
                 Vector3 newCameraPosition = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref currentVelocity, cameraSpeed);
@@ -72,12 +75,14 @@ public class CameraFollow : MonoBehaviour
                 {
                     transform.position = new Vector3(newCameraPosition.x, newCameraPosition.y + 0.15f, newCameraPosition.z);
                 }
-                else {
+                else
+                {
                     transform.position = new Vector3(newCameraPosition.x, transform.position.y, newCameraPosition.z);
                 }
                 // Actualizar la última posición conocida del objetivo
                 lastTargetPosition = target.position;
             }
+
 
         }
     }
